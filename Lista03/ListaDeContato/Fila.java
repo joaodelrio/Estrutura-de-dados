@@ -2,12 +2,17 @@ public class Fila{
   int ponteiro_final=-1;
   int inicio=0;
 
-  Contato lista[] = new Contato[10];
+  Contato lista[];
+
+  public Fila(int tamanho){
+    lista = new Contato[tamanho];
+  }
 
   public void insereFila(Contato ci){
     if(ponteiro_final<(lista.length-1)){ //Confere se a lista está cheia
-      lista[ponteiro_final+1] = ci; //Coloca no final da fila
       ponteiro_final++;
+      lista[ponteiro_final] = ci; //Coloca no final da fila
+      
     }
     else{
       System.out.println("Fila cheia");
