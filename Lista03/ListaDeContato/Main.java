@@ -1,7 +1,7 @@
 class Main {
   public static void main(String[] args) {
-    Fila lf = new Fila();
-    Pilha lp = new Pilha();
+    Fila lf = new Fila(10);
+    Pilha lp = new Pilha(10);
     Contato c1 = new Contato("Romas", "19987");
     Contato c2 = new Contato("Joao", "1998");
     Contato c3 = new Contato("Faria", "19999");
@@ -23,6 +23,10 @@ class Main {
     lp.inserePilha(c2);
     lp.inserePilha(c3);
     lp.inserePilha(c1);
+    lp.imprimePilha();
+    lp.removePilha();
+    lp.imprimePilha();
+    lp.removePilha();
     lp.imprimePilha();
     lp.removePilha();
     lp.imprimePilha();
